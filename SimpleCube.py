@@ -1,3 +1,11 @@
+__author__ = 'Nate'
+
+'''
+    This will draw a simple Cube in OpenGL in python.
+    Taken from: https://www.youtube.com/watch?v=R4n4NyDG2hI
+'''
+
+
 import pygame
 from pygame.locals import *
 
