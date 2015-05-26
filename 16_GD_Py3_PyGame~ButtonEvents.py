@@ -146,7 +146,7 @@ def game_loop():
         car(x, y)
         things_dodged(dodged)
 
-        print (str(x) + "|" + str(display_width))
+        #print (str(x) + "|" + str(display_width))
 
         if x > display_width - car_width or x < 0:
            crash()
