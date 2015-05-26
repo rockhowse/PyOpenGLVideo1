@@ -12,8 +12,8 @@ import random
 
 pygame.init()
 
-display_height = 800
-display_width = 600
+display_width = 800
+display_height = 600
 
 black = (0, 0, 0)
 white = (255, 255, 255)
@@ -29,7 +29,7 @@ car_height = 94
 
 block_color = (53, 115, 255)
 
-gameDisplay = pygame.display.set_mode((display_height, display_width))
+gameDisplay = pygame.display.set_mode([display_width, display_height])
 pygame.display.set_caption('A bit Racey')
 clock = pygame.time.Clock()
 
@@ -39,7 +39,7 @@ largeText = pygame.font.SysFont("comicsansms", 115)
 smallText = pygame.font.SysFont("comicsansms", 20)
 
 def things_dodged(count):
-    font = pygame.font.SysFont(None, 25)
+    font = pygame.font.SysFont("comicsansms", 25)
     text = font.render("Dodged: " + str(count), True, black)
     gameDisplay.blit(text, (0,0))
     pygame.display.flip()
@@ -108,8 +108,8 @@ def game_intro():
 
 def game_loop():
 
-    x = (display_width/2)
-    y = (display_height/2)
+    x = ((display_width/2)-(car_width/2))
+    y = (display_height*0.8)
 
     x_change = 0
 
@@ -145,6 +145,8 @@ def game_loop():
         thing_starty += thing_speed
         car(x, y)
         things_dodged(dodged)
+
+        print (str(x) + "|" + str(display_width))
 
         if x > display_width - car_width or x < 0:
            crash()
