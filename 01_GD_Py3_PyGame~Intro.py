@@ -1,7 +1,8 @@
 __author__ = 'Nate'
 
 '''
-    pygame tutorial video
+    Pygame tutorial video 1
+    Title: Intro
     URL: https://www.youtube.com/watch?v=ujOTNg17LjI&list=PLQVvvaa0QuDdLkP8MrOXLe_rKuf6r80KO&index=1
 '''
 
